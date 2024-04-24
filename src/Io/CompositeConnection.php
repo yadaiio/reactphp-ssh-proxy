@@ -11,6 +11,7 @@ use React\Stream\Util;
 /** @internal */
 class CompositeConnection extends EventEmitter implements ConnectionInterface
 {
+    private $remote;
     private $read;
     private $write;
     private $closed = false;

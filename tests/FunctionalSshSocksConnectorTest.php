@@ -29,7 +29,7 @@ class FunctionalSshSocksConnectorTest extends TestCase
     public function tearDownSSHClientProcess()
     {
         // run loop in order to shut down SSH client process again
-        \React\Async\await(\React\Promise\Timer\sleep(0.001));
+        \React\Async\await(\React\Async\delay(0.001));
     }
 
     public function testConnectInvalidProxyUriWillReturnRejectedPromise()
